@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css' ) }}">
+</head>
+<body>
+<div class="container bg-light">
+<hr>
+<h1>pabsarte</h1>
+<p>I make art because I don't know how to cry.</p>
+<hr>
+<div class="row">
+{% for image in paths %}
+  <div class="col-md-4">
+    <p class="text-center">
+    <img
+      src="/static/images/{{ image }}"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="{{ image }}"
+      width="300" 
+      height="300"
+    />
+    </p>
+  </div>
+{% endfor %}
+</div>
+
+
+</div>
+
+</body>
+</html>
